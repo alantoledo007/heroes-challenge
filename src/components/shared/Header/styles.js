@@ -12,5 +12,12 @@ export const HeaderStayles = styled.header`
 
     @media(max-width: 767px){
         display: block;
+        img {
+            margin-right: 0;
+        }
+        button{
+            margin-left: 0;
+            width:100%;
+        }
     }
 `;
