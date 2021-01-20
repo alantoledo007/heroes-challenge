@@ -1,13 +1,14 @@
 import ResetStyle from "./styles/Reset";
 import GlobalStyle from "./styles/Global";
+import Home from "./views/Home";
 
 function App() {
   return (
     <>
-      <GlobalStyle />
       <ResetStyle />
+      <GlobalStyle />
 
-      <div>hola mundo</div>
+      <Home />
     </>
   );
 }

@@ -12,29 +12,29 @@ const GlobalStyle = createGlobalStyle`
 @font-face {
     font-family: Lato;
     font-weight: 100;
-    src: url(${LatoThin});
+    src:local('Lato') local('sans serif') url(${LatoThin}) format('truetype');
 }
 @font-face {
     font-family: Lato;
     font-weight: 300;
-    src: url(${LatoLight});
+    src:local('Lato') local('sans serif') url(${LatoLight}) format('truetype');
 }
 
 @font-face {
     font-family: Lato;
     font-weight: normal;
-    src: url(${LatoRegular});
+    src:local('Lato') local('sans serif') url(${LatoRegular}) format('truetype');
 }
 
 @font-face {
     font-family: Lato;
     font-weight: 500;
-    src: url(${LatoBold});
+    src:local('Lato') local('sans serif') url(${LatoBold}) format('truetype');
 }
 @font-face {
     font-family: Lato;
-    font-weight: 700;
-    src: url(${LatoBlack});
+    font-weight: 900;
+    src:local('Lato') local('sans serif') url(${LatoBlack}) format('truetype');
 }
 
 html {
@@ -57,6 +57,59 @@ body {
 strong, 
 .--strong {
     font-weight: 500;
+}
+
+.text-center {
+  text-align:center;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+  appearance: none;
+}
+::-webkit-scrollbar-thumb {
+  background: ${colors.white};
+  border-radius: 7.5px;
+  position:absolute;
+  border: 3px solid ${colors.primary};
+  box-shadow: -1px 2px 0 ${colors.primary};
+}
+
+.mt {
+  margin-top: 40px;
+}
+
+.mb {
+  margin-bottom: 40px;
+}
+
+/* Animaciones */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
 }
 `
 
