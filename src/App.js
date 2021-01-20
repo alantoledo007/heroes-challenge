@@ -1,8 +1,14 @@
+import ResetStyle from "./styles/Reset";
+import GlobalStyle from "./styles/Global";
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <>
+      <GlobalStyle />
+      <ResetStyle />
+
+      <div>hola mundo</div>
+    </>
   );
 }
 
